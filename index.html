@@ -1,138 +1,642 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090909">
-<title>SUADA &AMEEN | Wedding Reception</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
-:root{--gold:#b79b70;--gold2:#8d7656;--black:#f6f1e8;--muted:#786f63}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:#40382f;font-family:Montserrat,Arial,sans-serif;font-weight:300}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:48px 22px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#fffdf8 0%,#f3eadb 48%,#e9decd 100%)}
-.hero:before,.hero:after{content:"";position:absolute;inset:20px;border:1px solid rgba(160,128,82,.42);pointer-events:none}
-.hero:after{inset:29px;border-color:rgba(160,128,82,.18)}
-.glow{position:absolute;width:340px;height:340px;border-radius:50%;background:#b79b7025;filter:blur(55px)}
-.content{position:relative;z-index:1;max-width:760px}
-.bismillah{color:var(--gold2);font-size:20px;letter-spacing:3px;margin-bottom:28px}
-.kicker{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin:0 0 20px}
-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(64px,13vw,116px);line-height:.82;font-weight:500;margin:0;color:var(--gold2)}
-.amp{display:block;font-size:44px;font-style:italic;color:var(--gold);margin:13px 0}
-.subtitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(23px,4vw,32px);letter-spacing:2px;margin:34px 0 14px}
-.invite{max-width:490px;margin:0 auto;color:#655b4e;line-height:1.9;font-size:13px}
-.rule{width:76px;height:1px;background:var(--gold);margin:28px auto}
-.date{color:var(--gold2);letter-spacing:3px;font-size:13px;text-transform:uppercase}
-.time{font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;margin-top:10px}
-.scroll{margin-top:44px;color:var(--gold);font-size:9px;letter-spacing:4px;text-transform:uppercase}
-section{padding:76px 22px;text-align:center}.section-inner{max-width:780px;margin:auto}
-h2{font:500 42px 'Cormorant Garamond',Georgia,serif;color:var(--gold2);margin:0 0 14px}
-.smallcap{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
-.details{background:#f4eee4}
-.detail-card{border:1px solid #b79b70;padding:34px 22px;margin:30px auto 0;max-width:570px;background:linear-gradient(145deg,#fffdf8,#eee4d5)}
-.detail-label{color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin:8px 0}
-.detail-value{font:26px 'Cormorant Garamond',Georgia,serif;margin-bottom:25px}
-.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0}
-.unit{border:1px solid #c9b99f;min-width:82px;padding:14px 10px}
-.unit strong{display:block;font:34px 'Cormorant Garamond',Georgia,serif;color:var(--gold2)}
-.unit span{font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
-.mapbtn{display:inline-block;margin-top:15px;padding:14px 24px;border:1px solid var(--gold);color:var(--gold2);text-decoration:none;font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:.2s}
-.mapbtn:hover{background:var(--gold);color:#111}
-footer{padding:36px 20px;text-align:center;border-top:1px solid #d8cbb8;color:#81735f;font-size:10px;letter-spacing:2px}
-@media(max-width:480px){.hero:before{inset:12px}.hero:after{inset:20px}.bismillah{font-size:16px}.detail-value{font-size:23px}section{padding:62px 18px}}
-</style>
+
+<title>SUADA & AMEEN | Wedding Reception</title>
 
 <style>
-body{background:#f6f1e8;color:#40382f}
-.hero{background:radial-gradient(ellipse at 50% 42%,#fffdf8 0%,#f3eadb 48%,#e9decd 100%)}
-.hero:before{border-color:rgba(160,128,82,.42)}
-.hero:after{border-color:rgba(160,128,82,.18)}
-.kicker,.scroll,.smallcap,.detail-label{color:#9a7d50}
-h1,.date,.detail-value{color:#806744}
-.amp{color:#a88959}
-.invite{color:#655b4e}
-.details{background:#f1e9dc}
-.detail-card{background:linear-gradient(145deg,#fffdf8,#eee4d5);border-color:#b79b70}
-.unit{border-color:#c9b99f}
-.unit strong{color:#806744}
-.unit span{color:#786f63}
-.mapbtn{color:#806744;border-color:#b79b70}
-.mapbtn:hover{background:#b79b70;color:#fffdf8}
-footer{border-color:#d8cbb8;color:#81735f}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  --gold: #b79b70;
+  --gold2: #806744;
+  --black: #f6f1e8;
+  --muted: #786f63;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: #40382f;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 22px;
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    #fffdf8 0%,
+    #f3eadb 48%,
+    #e9decd 100%
+  );
+}
+
+.hero:before,
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(160,128,82,.42);
+  pointer-events: none;
+}
+
+.hero:after {
+  inset: 29px;
+  border-color: rgba(160,128,82,.18);
+}
+
+.glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #b79b7025;
+  filter: blur(55px);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  width: 100%;
+}
+
+.bismillah {
+  color: var(--gold2);
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+}
+
+.kicker {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9a7d50;
+  margin: 0 0 20px;
+}
+
+/* COUPLE NAMES */
+
+.couple-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.person {
+  text-align: center;
+  width: 100%;
+}
+
+.person h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(55px, 12vw, 100px);
+  line-height: .9;
+  font-weight: 500;
+  margin: 0;
+  color: var(--gold2);
+}
+
+.parents {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+  color: #806744;
+  margin: 15px 0;
+}
+
+.parents strong {
+  font-weight: 500;
+}
+
+.amp {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 35px;
+  font-style: italic;
+  color: #a88959;
+  margin: 5px 0;
+}
+
+.rule {
+  width: 76px;
+  height: 1px;
+  background: var(--gold);
+  margin: 28px auto;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(23px, 4vw, 32px);
+  letter-spacing: 2px;
+  margin: 34px 0 14px;
+}
+
+.invite {
+  max-width: 490px;
+  margin: 0 auto;
+  color: #655b4e;
+  line-height: 1.9;
+  font-size: 13px;
+}
+
+.date {
+  color: var(--gold2);
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.time {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 27px;
+  margin-top: 10px;
+}
+
+.scroll {
+  margin-top: 44px;
+  color: #9a7d50;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 76px 22px;
+  text-align: center;
+}
+
+.section-inner {
+  max-width: 780px;
+  margin: auto;
+}
+
+h2 {
+  font: 500 42px 'Cormorant Garamond', Georgia, serif;
+  color: var(--gold2);
+  margin: 0 0 14px;
+}
+
+.smallcap {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #9a7d50;
+}
+
+/* DETAILS */
+
+.details {
+  background: #f1e9dc;
+}
+
+.detail-card {
+  border: 1px solid #b79b70;
+  padding: 34px 22px;
+  margin: 30px auto 0;
+  max-width: 570px;
+  background: linear-gradient(145deg, #fffdf8, #eee4d5);
+}
+
+.detail-label {
+  color: #9a7d50;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+
+.detail-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  color: var(--gold2);
+  margin-bottom: 25px;
+}
+
+/* COUNTDOWN */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 28px 0;
+}
+
+.unit {
+  border: 1px solid #c9b99f;
+  min-width: 82px;
+  padding: 14px 10px;
+}
+
+.unit strong {
+  display: block;
+  font: 34px 'Cormorant Garamond', Georgia, serif;
+  color: var(--gold2);
+}
+
+.unit span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* MAP BUTTON */
+
+.mapbtn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  border: 1px solid #b79b70;
+  color: var(--gold2);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.mapbtn:hover {
+  background: #b79b70;
+  color: #fffdf8;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 36px 20px;
+  text-align: center;
+  border-top: 1px solid #d8cbb8;
+  color: #81735f;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+  .hero:before {
+    inset: 12px;
+  }
+
+  .hero:after {
+    inset: 20px;
+  }
+
+  .bismillah {
+    font-size: 16px;
+  }
+
+  .person h1 {
+    font-size: clamp(52px, 13vw, 78px);
+  }
+
+  .parents {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .detail-value {
+    font-size: 23px;
+  }
+
+  section {
+    padding: 62px 18px;
+  }
+}
 </style>
 
 </head>
+
 <body>
+
+<!-- HERO SECTION -->
+
 <header class="hero">
- <div class="glow"></div>
- <div class="content">
-  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-  <p class="kicker">Together with our families</p>
-  <h1>SUADA<span class="amp">&amp;</span>AMEEN</h1>
-  <div class="rule"></div>
-  <p class="subtitle">Wedding Reception</p>
-  <p class="invite">Together with our families, we invite you to celebrate our wedding reception.</p>
-  <div class="rule"></div>
-  <div class="date">Thursday · 24 December 2026</div>
-  <div class="time">11:00 in the morning</div>
-  <div class="scroll">We look forward to celebrating with you</div>
- </div>
+
+  <div class="glow"></div>
+
+  <div class="content">
+
+    <div class="bismillah">
+      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+    </div>
+
+    <p class="kicker">
+      Together with our families
+    </p>
+
+    <!-- BRIDE AND GROOM -->
+
+    <div class="couple-names">
+
+      <!-- BRIDE -->
+
+      <div class="person">
+
+        <h1>SUADA</h1>
+
+        <p class="parents">
+          D/O of<br>
+          <strong>Mr MUHAMMED MUSTHAFA</strong><br>
+          &amp;<br>
+          <strong>Mrs THASLEENA</strong>
+        </p>
+
+      </div>
+
+      <span class="amp">&amp;</span>
+
+      <!-- GROOM -->
+
+      <div class="person">
+
+        <h1>AMEEN</h1>
+
+        <p class="parents">
+          S/O of<br>
+          <strong>Mr UMER K</strong><br>
+          &amp;<br>
+          <strong>Mrs FATHIMA SUHARA</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="rule"></div>
+
+    <p class="subtitle">
+      Wedding Reception
+    </p>
+
+    <p class="invite">
+      Together with our families, we invite you to celebrate our wedding reception.
+    </p>
+
+    <div class="rule"></div>
+
+    <div class="date">
+      Thursday · 24 December 2026
+    </div>
+
+    <div class="time">
+      11:00 in the morning
+    </div>
+
+    <div class="scroll">
+      We look forward to celebrating with you
+    </div>
+
+  </div>
+
 </header>
+
+<!-- DETAILS SECTION -->
+
 <section class="details">
- <div class="section-inner">
-  <p class="smallcap">Save the date</p>
-  <h2>A day to remember</h2>
-  <p style="color:#786f63;font-size:13px;line-height:1.8">Your presence will make our celebration even more special.</p>
-  <div class="countdown" id="countdown">
-   <div class="unit"><strong id="days">--</strong><span>Days</span></div>
-   <div class="unit"><strong id="hours">--</strong><span>Hours</span></div>
-   <div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div>
-   <div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div>
+
+  <div class="section-inner">
+
+    <p class="smallcap">
+      Save the date
+    </p>
+
+    <h2>
+      A day to remember
+    </h2>
+
+    <p style="color:#786f63;font-size:13px;line-height:1.8">
+      Your presence will make our celebration even more special.
+    </p>
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown" id="countdown">
+
+      <div class="unit">
+        <strong id="days">--</strong>
+        <span>Days</span>
+      </div>
+
+      <div class="unit">
+        <strong id="hours">--</strong>
+        <span>Hours</span>
+      </div>
+
+      <div class="unit">
+        <strong id="minutes">--</strong>
+        <span>Minutes</span>
+      </div>
+
+      <div class="unit">
+        <strong id="seconds">--</strong>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+    <!-- EVENT DETAILS -->
+
+    <div class="detail-card">
+
+      <div class="detail-label">
+        The celebration
+      </div>
+
+      <div class="detail-value">
+        Thursday, 24 December 2026
+      </div>
+
+      <div class="detail-label">
+        Time
+      </div>
+
+      <div class="detail-value">
+        11:00 AM
+      </div>
+
+      <div class="detail-label">
+        Venue
+      </div>
+
+      <div class="detail-value">
+        SHALIMAR CONVENTION CENTRE
+      </div>
+
+      <a
+        class="mapbtn"
+        href="https://share.google/IRu437Pg2Q1zpdaCC"
+        target="_blank"
+        rel="noopener"
+      >
+        View venue on Google Maps ↗
+      </a>
+
+    </div>
+
   </div>
-  <div class="detail-card">
-   <div class="detail-label">The celebration</div>
-   <div class="detail-value">Thursday, 24 December 2026</div>
-   <div class="detail-label">Time</div>
-   <div class="detail-value">11:00 AM</div>
-   <div class="detail-label">Venue</div>
-   <div class="detail-value">SHALIMAR CONVENTION CENTRE</div>
-   <a class="mapbtn" href="https://share.google/IRu437Pg2Q1zpdaCC" target="_blank" rel="noopener">View venue on Google Maps ↗</a>
-  </div>
- </div>
+
 </section>
+
+<!-- WITH LOVE SECTION -->
+
 <section>
- <div class="section-inner">
-  <p class="smallcap">With love</p>
-  <h2>SUADA &amp; AMEEN</h2>
-  <p class="invite">We would be honoured by your presence as we begin this beautiful new chapter. Thank you for being part of our happiness.</p>
-  <div class="rule"></div>
-  <p class="date">24 · 12 · 2026</p>
- </div>
+
+  <div class="section-inner">
+
+    <p class="smallcap">
+      With love
+    </p>
+
+    <h2>
+      SUADA &amp; AMEEN
+    </h2>
+
+    <p class="invite">
+      We would be honoured by your presence as we begin this beautiful new chapter. Thank you for being part of our happiness.
+    </p>
+
+    <div class="rule"></div>
+
+    <p class="date">
+      24 · 12 · 2026
+    </p>
+
+  </div>
+
 </section>
+
+<!-- IN LOVING MEMORY -->
 
 <section class="details" aria-label="In loving memory">
- <div class="section-inner">
-  <p class="smallcap">In loving memory</p>
-  <h2>Remembered with Love</h2>
-  <p style="color:#655b4e;font:italic 22px 'Cormorant Garamond',Georgia,serif;line-height:1.6;margin:22px auto;max-width:560px">
-   Though you are not with us today, your love, memories and blessings will forever remain in our hearts and be part of our special moments.
-  </p>
-  <div class="rule"></div>
-  <div class="detail-value" style="color:var(--gold2);margin-bottom:8px">KUNJALAVI KUTTY HAJI</div>
-  <div class="detail-value" style="color:var(--gold2);margin-bottom:8px">PATHUMMA</div>
-  <p style="color:#81735f;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:22px">Forever loved · Forever remembered</p>
- </div>
+
+  <div class="section-inner">
+
+    <p class="smallcap">
+      In loving memory
+    </p>
+
+    <h2>
+      Remembered with Love
+    </h2>
+
+    <p style="
+      color:#655b4e;
+      font:italic 22px 'Cormorant Garamond',Georgia,serif;
+      line-height:1.6;
+      margin:22px auto;
+      max-width:560px;
+    ">
+      Though you are not with us today, your love, memories and blessings will forever remain in our hearts and be part of our special moments.
+    </p>
+
+    <div class="rule"></div>
+
+    <div class="detail-value" style="margin-bottom:8px">
+      KUNJALAVI KUTTY HAJI
+    </div>
+
+    <div class="detail-value" style="margin-bottom:8px">
+      PATHUMMA
+    </div>
+
+    <p style="
+      color:#81735f;
+      font-size:10px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-top:22px;
+    ">
+      Forever loved · Forever remembered
+    </p>
+
+  </div>
+
 </section>
 
-<footer>SUADA &amp; AMEEN · WEDDING RECEPTION · 2026</footer>
+<!-- FOOTER -->
+
+<footer>
+  SUADA &amp; AMEEN · WEDDING RECEPTION · 2026
+</footer>
+
+<!-- COUNTDOWN SCRIPT -->
+
 <script>
-const target = new Date('2026-12-24T11:00:00+05:30').getTime();
-function tick(){
- const diff=target-Date.now();
- if(diff<=0){document.getElementById('countdown').innerHTML='<p style="color:#8d7656">The celebration day is here!</p>';return}
- const vals={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};
- Object.entries(vals).forEach(([k,v])=>document.getElementById(k).textContent=String(v).padStart(2,'0'));
+
+const target = new Date(
+  '2026-12-24T11:00:00+05:30'
+).getTime();
+
+function tick() {
+
+  const diff = target - Date.now();
+
+  if (diff <= 0) {
+
+    document.getElementById('countdown').innerHTML =
+      '<p style="color:#8d7656">The celebration day is here!</p>';
+
+    return;
+  }
+
+  const vals = {
+    days: Math.floor(diff / 86400000),
+
+    hours: Math.floor(
+      diff % 86400000 / 3600000
+    ),
+
+    minutes: Math.floor(
+      diff % 3600000 / 60000
+    ),
+
+    seconds: Math.floor(
+      diff % 60000 / 1000
+    )
+  };
+
+  Object.entries(vals).forEach(([k, v]) => {
+
+    document.getElementById(k).textContent =
+      String(v).padStart(2, '0');
+
+  });
+
 }
-tick();setInterval(tick,1000);
+
+tick();
+
+setInterval(tick, 1000);
+
 </script>
+
 </body>
 </html>
